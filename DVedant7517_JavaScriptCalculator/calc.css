@@ -1,0 +1,67 @@
+* {
+    padding: 0;
+    margin: 15px;
+    text-align: center;
+}
+
+body {
+    background-color: powderblue;
+}
+
+.calc {
+    width: 350px;
+    height: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid black;
+    border-radius: 10px;
+    background-color: lightskyblue;
+}
+
+#display {
+    width: 320px;
+    height: 40px;
+    text-align: right;
+    background-color: black;
+    border: 3px solid white;
+    font-size: 20px;
+    left: 2px;
+    top: 2px;
+    color: #7fff00;
+}
+
+.bTop {
+    color: white;
+    background-color: #6f6f6f;
+    font-size: 16px;
+    margin: auto;
+    width: 50px;
+    height: 25px;
+}
+
+.bNum {
+    color: white;
+    background-color: black;
+    font-size: 16px;
+    margin: auto;
+    width: 50px;
+    height: 25px;
+}
+
+.bMath {
+    color: white;
+    background-color: #ff4561;
+    font-size: 16px;
+    margin: auto;
+    width: 50px;
+    height: 25px;
+}
+
+.bOpps {
+    color: white;
+    background-color: #ff9933;
+    font-size: 16px;
+    margin: auto;
+    width: 50px;
+    height: 25px;
+}

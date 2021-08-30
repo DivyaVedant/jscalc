@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <Title>Scientific Calculator</Title>
+    <!-- External CSS and JavaScript links -->
+    <link rel="stylesheet" href="calc.css">
+    <script src="calc.js">
+    </script>
+</head>
+
+<body>
+    <!-- Project title  -->
+    <h1>Scientific Calculator</h1>
+    <table class="calc">
+        <!-- First Row -->
+        <tr>
+            <td colspan="5"><input id="display" name="display" value="0" size="28" maxlength="25"></td>
+        </tr>
+        <!-- Second Row -->
+        <tr>
+            <td><input type="button" class="bTop" name="bTop" value="C" onclick="display.value=0"></td>
+            <td><input type="button" class="bTop" name="bTop" value="<--" onclick="deleteChar(display)"></td>
+            <td><input type="button" class="bTop" name="bTop" value="=" onclick=" if(checkNum(display.value)) { compute(value) }"></td>
+            <td><input type="button" class="bOpps" name="bOpps" value="&#960;" onclick="if(checkNum(display.value)) { pi(value) }"></td>
+            <td><input type="button" class="bMath" name="bMath" value="%" onclick=" if(checkNum(display.value)) { percent(value) }"></td>
+        </tr>
+        <!-- Third Row -->
+        <tr>
+            <td><input type="button" class="bNum" name="bNum" value="7" onclick="addChar(display, '7')"></td>
+            <td><input type="button" class="bNum" name="bNum" value="8" onclick="addChar(display, '8')"></td>
+            <td><input type="button" class="bNum" name="bNum" value="9" onclick="addChar(display, '9')"></td>
+            <td><input type="button" class="bOpps" name="bOpps" value="x&#94;" onclick="if(checkNum(display.value)) { exp(value) }"></td>
+            <td><input type="button" class="bMath" name="bMath" value="/" onclick="addChar(display, '/')"></td>
+        </tr>
+        <!-- Fourth Row -->
+        <tr>
+            <td><input type="button" class="bNum" name="bNum" value="4" onclick="addChar(display, '4')"></td>
+            <td><input type="button" class="bNum" name="bNum" value="5" onclick="addChar(display, '5')"></td>
+            <td><input type="button" class="bNum" name="bNum" value="6" onclick="addChar(display, '6')"></td>
+            <td><input type="button" class="bOpps" name="bOpps" value="ln" onclick="if(checkNum(display.value)) { ln(value) }"></td>
+            <td><input type="button" class="bMath" name="bMath" value="*" onclick="addChar(display, '*')"></td>
+        </tr>
+        <!-- Fifth Row -->
+        <tr>
+            <td><input type="button" class="bNum" name="bNum" value="1" onclick="addChar(display, '1')"></td>
+            <td><input type="button" class="bNum" name="bNum" value="2" onclick="addChar(display, '2')"></td>
+            <td><input type="button" class="bNum" name="bNum" value="3" onclick="addChar(display, '3')"></td>
+            <td><input type="button" class="bOpps" name="bOpps" value="&radic;" onclick="if(checkNum(display.value)) { sqrt(value) }"></td>
+            <td><input type="button" class="bMath" name="bMath" value="-" onclick="addChar(display, '-')"></td>
+        </tr>
+        <!-- Sixth Row -->
+        <tr>
+            <td><input type="button" class="bMath" name="bMath" value="&#177;" onclick="changeSign(display)"></td>
+            <td><input type="button" class="bNum" name="bNum" value="0" onclick="addChar(display, '0')"></td>
+            <td><input type="button" class="bMath" name="bMath" value="&#46;" onclick="addChar(display, '&#46;')"></td>
+            <td><input type="button" class="bOpps" name="bOpps" value="x&#50;" onclick="if(checkNum(display.value)) { square(value) }"></td>
+            <td><input type="button" class="bMath" name="bMath" value="+" onclick="addChar(display, '+')"></td>
+        </tr>
+        <!-- Seventh Row -->
+        <tr>
+            <td><input type="button" class="bMath" name="bMath" value="(" onclick="addChar(display, '(')"></td>
+            <td><input type="button" class="bMath" name="bMath" value=")" onclick="addChar(display, ')')"></td>
+            <td><input type="button" class="bMath" name="bMath" value="cos" onclick="if(checkNum(display.value)) { cos(value) }"></td>
+            <td><input type="button" class="bMath" name="bMath" value="sin" onclick="if(checkNum(display.value)) { sin(value) }"></td>
+            <td><input type="button" class="bMath" name="bMath" value="tan" onclick="if(checkNum(display.value)) { tan(value) }"></td>
+        </tr>
+    </table>
+    <p><br></p>
+    <!-- Footer Information -->
+    <footer>Copyright &copy; 2020 Divya R Vedant</footer>
+
+</body>
+
+</html>
